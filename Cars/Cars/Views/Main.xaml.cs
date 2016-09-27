@@ -13,6 +13,12 @@ namespace Cars.Views
 		public Main ()
 		{
 			InitializeComponent ();
+
+            var vm = new Cars.VModel();
+            this.BindingContext = vm;
+
+            vm.GetProvinces();
+            vm.GetMakes();
 		}
 	}
 }
