@@ -10,9 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)StackedBitmap.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ExtendedPicker.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ImageResourceExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
       <SubType>Code</SubType>

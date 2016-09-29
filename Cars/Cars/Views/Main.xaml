@@ -98,6 +98,7 @@
       <Picker x:Name="cboBrand" Title="La marque"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+              
               />
     </Grid>
 
@@ -119,7 +120,7 @@
       <Image Style="{StaticResource ThumbImageModels}"
        Grid.Row="0" Grid.Column="1"  />
 
-      <Picker Title="Le modèle"
+      <Picker x:Name="cboModel" Title="Le modèle"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
@@ -143,7 +144,7 @@
       <Image Style="{StaticResource ThumbImageCalendar}"
              Grid.Row="0" Grid.Column="1"  />
 
-      <Picker Title="L'année"
+      <Picker x:Name="cboCar" Title="L'année"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
