@@ -90,49 +90,49 @@ namespace Cars
         #endregion
 
 
-//        #region ** EVAL **
+        #region ** EVAL **
 
-//        private Data.FinancialEvaluation _FinEvaluation;
-//        public Data.FinancialEvaluation FinEvaluation
-//        {
-//            get { return this._FinEvaluation; }
-//            set
-//            {
-//                this._FinEvaluation = value;
-//                this.RaiseNotification(nameof(FinEvaluation));
-//                this.RaiseNotification(nameof(FinEvaluationDescription));
-//            }
-//        }
+        private Data.FinancialEvaluation _FinEvaluation;
+        public Data.FinancialEvaluation FinEvaluation
+        {
+            get { return this._FinEvaluation; }
+            set
+            {
+                this._FinEvaluation = value;
+                this.RaiseNotification(nameof(FinEvaluation));
+                this.RaiseNotification(nameof(FinEvaluationDescription));
+            }
+        }
 
-//        public string FinEvaluationDescription
-//        {
-//            get
-//            {
+        public string FinEvaluationDescription
+        {
+            get
+            {
 
-//                string msg = "";
-//                if (this.FinEvaluation != null)
-//                {
-//                    msg = $@"Vous allez dépenser {this.FinEvaluation.GasConsumptionIn8Years:N2}$ en essence
+                string msg = "";
+                if (this.FinEvaluation != null)
+                {
+                    msg = $@"Vous allez dépenser {this.FinEvaluation.GasConsumptionIn8Years:N2}$ en essence
 
-//Vous allez dépenser {this.FinEvaluation.ElectricityConsumptionExpensesIn8Years:N2}$ en électricité
+Vous allez dépenser {this.FinEvaluation.ElectricityConsumptionExpensesIn8Years:N2}$ en électricité
 
-//Vous aurez dépensé {this.FinEvaluation.DeltaPrice:N2}$ de plus en achetant une voiture électrique
+Vous aurez dépensé {this.FinEvaluation.DeltaPrice:N2}$ de plus en achetant une voiture électrique
 
-//Le coût estimé pour le remplacement de la batterie est {this.FinEvaluation.BatteryExpenses:N2}$.
-//";
-//                }
+Le coût estimé pour le remplacement de la batterie est {this.FinEvaluation.BatteryExpenses:N2}$.
+";
+                }
 
-//                return msg;
-//            }
-//        }
+                return msg;
+            }
+        }
 
-//        public async void Evaluate(Data.Profile profile)
-//        {
-//            var data = await this._Model.Calculate(profile);
-//            this.FinEvaluation = data.Content;
-//        }
+        public async void Evaluate(Data.Profile profile)
+        {
+            var data = await this._Model.Calculate(profile);
+            this.FinEvaluation = data.Content;
+        }
 
-//        #endregion
+        #endregion
 
     }
 }
