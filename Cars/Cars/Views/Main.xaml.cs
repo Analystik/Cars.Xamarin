@@ -72,11 +72,11 @@ namespace Cars.Views
         {
             var vm = this.BindingContext as VModel;
 
-            await DisplayAlert("check", vm.Provinces[this.cboProvince.SelectedIndex].Name, "Cancel");
+            //await DisplayAlert("check", vm.Provinces[this.cboProvince.SelectedIndex].Name, "Cancel");
 
 
             //Button button = (Button)sender;
-            //await Navigation.PushAsync(new Views.Result(new Data.Profile() { CarId = 1, ProvinceId = 1, KMPerYear = 10000 }));
+            await Navigation.PushAsync(new Views.Result(new Data.Profile() { CarId = 1, ProvinceId = 1, KMPerYear = 10000 }));
         }
     }
 }

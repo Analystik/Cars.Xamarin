@@ -9,8 +9,8 @@
       <Style x:Key="labelStyle" TargetType="Label">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="Medium"/>
-        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <!--<Setter Property="HeightRequest" Value="40"/>-->
         <Setter Property="Margin" Value="10"/>
       </Style>
 
@@ -26,22 +26,38 @@
         <Setter Property="WidthRequest" Value="52" />
         <Setter Property="HeightRequest" Value="48" />
         <Setter Property="Margin" Value="0, 5, 0, 15" />
-      </Style>     
+      </Style>
+
+      <Style x:Key="innerLayoutStyle" TargetType="StackLayout">
+        <!--<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FFFFFFFF" />-->
+
+        <!--<Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}" />-->
+        <!--<Setter Property="WidthRequest" Value="450" />-->
+      </Style>
+      
     </ResourceDictionary>
   </ContentPage.Resources>
 
 
 
   <StackLayout Spacing="0" >
+    <!--<StackLayout Spacing="0" BorderColor="#FF2DBF29" BorderWidth="2">-->
+    <StackLayout>
+      <Label Text="Propriétaire plus de 8 ans"
+             Style="{DynamicResource labelStyle}"
+             HeightRequest="60"
+             FontSize="20"
+             FontAttributes="Bold"
+               />
+      <Label Text="{Binding FinEvaluationDescription}"
+             Style="{DynamicResource labelStyle}"
+               />
 
-
-    <Label Text="Propriétaire plus de 8 ans"
-       Style="{DynamicResource labelStyle}"
-             />
-
+    </StackLayout>
 
     <Grid>
       <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
         <RowDefinition Height="*" />
         <RowDefinition Height="*" />
       </Grid.RowDefinitions>
@@ -51,26 +67,29 @@
       </Grid.ColumnDefinitions>
 
 
-        <Image Style="{StaticResource ElementImagePomp}"
-               Grid.Row="0" Grid.Column="0"
+      <Image Style="{StaticResource ElementImagePomp}"
+             Grid.Row="0" Grid.Column="0"
               />
-        <Label Text="Essence"
-               Style="{DynamicResource labelStyle}"
-               Grid.Row="1" Grid.Column="0"
+      <Label Text="{Binding FinEvaluation.GasTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
+             Style="{DynamicResource labelStyle}"
+             Grid.Row="1" Grid.Column="0"
               />
-        
+      <Label Text="{Binding FinEvaluation.GasTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
+             Style="{DynamicResource labelStyle}"
+             Grid.Row="2" Grid.Column="0"
+              />
 
-
-        <Image Style="{StaticResource ElementImagePlug}"
-               Grid.Row="0" Grid.Column="1"
+      <Image Style="{StaticResource ElementImagePlug}"
+             Grid.Row="0" Grid.Column="1"
                />
-        <Label Text="{Binding FinEvaluationDescription}"
-               Style="{DynamicResource labelStyle}"
-               Grid.Row="1" Grid.Column="1"
-               
+      <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
+             Style="{DynamicResource labelStyle}"
+             Grid.Row="1" Grid.Column="1"
               />
-
-
+      <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
+             Style="{DynamicResource labelStyle}"
+             Grid.Row="2" Grid.Column="1"
+              />
     </Grid>
 
 
@@ -78,7 +97,7 @@
 
   </StackLayout>
 
-  
+
   <!--Il faudrait un bouton por revenir en ARRIERRE-->
 
 
