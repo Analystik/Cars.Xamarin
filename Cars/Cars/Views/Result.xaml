@@ -64,7 +64,7 @@
         <Image Style="{StaticResource ElementImagePlug}"
                Grid.Row="0" Grid.Column="1"
                />
-        <Label Text="Electricite"
+        <Label Text="{Binding FinEvaluationDescription}"
                Style="{DynamicResource labelStyle}"
                Grid.Row="1" Grid.Column="1"
                

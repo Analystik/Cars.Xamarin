@@ -28,7 +28,7 @@ namespace Cars.Views
         async void OnButtonClicked(object sender, EventArgs args)
         {
             //Button button = (Button)sender;
-            await Navigation.PushAsync(new Views.Result());
+            await Navigation.PushAsync(new Views.Result(new Data.Profile() { CarId = 1, ProvinceId = 1, KMPerYear = 10000 }));
         }
     }
 }

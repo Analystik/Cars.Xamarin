@@ -10,9 +10,24 @@ namespace Cars.Views
 {
     public partial class Result : ContentPage
     {
-        public Result()
-        {
+        private Data.Profile _profile;
+
+        public Result(Data.Profile profile) {
             InitializeComponent();
+
+            this._profile = profile;
+
+            var vm = new Cars.VModel();
+            this.BindingContext = vm;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var vm = this.BindingContext as Cars.VModel;
+            vm.Evaluate(this._profile);
+
         }
     }
 }
