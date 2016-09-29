@@ -12,6 +12,10 @@
     <!--// This functionality starts with version 2.3.0 of Xamarin.Forms-->
     <!--<ResourceDictionary MergeWith="theme:MainStyles" />-->
 
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Assets/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>-->
+
     <!-- ou Voir pour Application.Resources dans App.xaml (https://developer.xamarin.com/guides/xamarin-forms/working-with/application-class/) -->
 
     <!--essayer pour images 
@@ -59,11 +63,6 @@
       <Style x:Key="ThumbImageKilometers" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/road.png" />
       </Style>
-
-      <!--<ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Assets/Styles.xaml" />
-      </ResourceDictionary.MergedDictionaries>-->
-
 
     </ResourceDictionary>
   </ContentPage.Resources>
