@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--// https://xamarinhelp.com/merged-dictionaries-xamarin-forms/
+// This functionality starts with version 2.3.0 of Xamarin.Forms-->
+
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Cars.Views.MainStyles"
+                >
+  
+  <Style x:Key="labelStyle" TargetType="Label">
+    <Setter Property="VerticalTextAlignment" Value="Center"/>
+    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    <Setter Property="FontSize" Value="Medium"/>
+    <Setter Property="HeightRequest" Value="40"/>
+    <Setter Property="Margin" Value="10"/>
+  </Style>
+
+  <Style x:Key="ThumbImageBrand" TargetType="Image">
+    <Setter Property="Source" Value="Assets/car.png" />
+    <Setter Property="WidthRequest" Value="30" />
+    <Setter Property="HeightRequest" Value="25" />
+    <Setter Property="Margin" Value="50, 5, 0, 5" />
+  </Style>
+
+  <Style x:Key="ThumbImageModels" TargetType="Image">
+    <Setter Property="Source" Value="Assets/car.png" />
+    <Setter Property="WidthRequest" Value="30" />
+    <Setter Property="HeightRequest" Value="25" />
+    <Setter Property="Margin" Value="50, 5, 0, 5" />
+  </Style>
+
+  <Style x:Key="ThumbImageCalendar" TargetType="Image">
+    <Setter Property="Source" Value="Assets/calendar.png" />
+    <Setter Property="WidthRequest" Value="30" />
+    <Setter Property="HeightRequest" Value="25" />
+    <Setter Property="Margin" Value="50, 5, 0, 5" />
+  </Style>
+
+  <Style x:Key="ThumbImageProvince" TargetType="Image">
+    <Setter Property="Source" Value="Assets/pin.png" />
+    <Setter Property="WidthRequest" Value="30" />
+    <Setter Property="HeightRequest" Value="25" />
+    <Setter Property="Margin" Value="50, 5, 0, 5" />
+  </Style>
+
+  <Style x:Key="ThumbImageKilometers" TargetType="Image">
+    <Setter Property="Source" Value="Assets/road.png" />
+    <Setter Property="WidthRequest" Value="30" />
+    <Setter Property="HeightRequest" Value="25" />
+    <Setter Property="Margin" Value="50, 5, 0, 5" />
+  </Style>
+
+  <!--<ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="Assets/Styles.xaml" />
+        </ResourceDictionary.MergedDictionaries>-->
+
+
+</ResourceDictionary>

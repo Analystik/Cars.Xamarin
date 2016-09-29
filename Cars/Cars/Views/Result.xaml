@@ -1,7 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Cars.Views.Result">
-	<!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
-  <Label Text="World End !!!!" TextColor="Red" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="Cars.Views.Result"
+             Title="Results">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HeightRequest" Value="40"/>
+        <Setter Property="Margin" Value="10"/>
+      </Style>
+
+      <Style x:Key="ElementImagePomp" TargetType="Image">
+        <Setter Property="Source" Value="Assets/pomp.png" />
+        <Setter Property="WidthRequest" Value="72" />
+        <Setter Property="HeightRequest" Value="42" />
+        <Setter Property="Margin" Value="0, 5, 0, 15" />
+      </Style>
+
+      <Style x:Key="ElementImagePlug" TargetType="Image">
+        <Setter Property="Source" Value="Assets/plug.png" />
+        <Setter Property="WidthRequest" Value="52" />
+        <Setter Property="HeightRequest" Value="48" />
+        <Setter Property="Margin" Value="0, 5, 0, 15" />
+      </Style>     
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+
+
+  <StackLayout Spacing="0" >
+
+
+    <Label Text="Propriétaire plus de 8 ans"
+       Style="{DynamicResource labelStyle}"
+             />
+
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+
+        <Image Style="{StaticResource ElementImagePomp}"
+               Grid.Row="0" Grid.Column="0"
+              />
+        <Label Text="Essence"
+               Style="{DynamicResource labelStyle}"
+               Grid.Row="1" Grid.Column="0"
+              />
+        
+
+
+        <Image Style="{StaticResource ElementImagePlug}"
+               Grid.Row="0" Grid.Column="1"
+               />
+        <Label Text="Electricite"
+               Style="{DynamicResource labelStyle}"
+               Grid.Row="1" Grid.Column="1"
+               
+              />
+
+
+    </Grid>
+
+
+
+
+  </StackLayout>
+
+  
+  <!--Il faudrait un bouton por revenir en ARRIERRE-->
+
+
 </ContentPage>

@@ -12,6 +12,19 @@ namespace Cars
     {
         private Model _Model = new Model();
 
+        public string Test { get { return "test1"; }  }
+        public Dictionary<string, string> Marques {
+            get {
+                return new Dictionary<string, string> {
+                    { "test1", "1"},
+                    { "test2", "2"}
+
+
+                };
+            }
+        }
+          
+
 
         #region ** MAKES **
 

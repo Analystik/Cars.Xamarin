@@ -10,6 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StackedBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ExtendedPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\ImageResourceExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -33,5 +36,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\calendar.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\car.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\pin.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\plug.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\pomp.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\road.png" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,226 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Cars.Views.Main">
-	<!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
-  <Label Text="Hello World!!!!" TextColor="Red" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="Cars.Views.Main"
+             Title="Analystik Cars">
+
+
+  <!--  Voir pour Application.Resources dans App.xaml -->
+  <ContentPage.Resources>
+
+    <!--// https://xamarinhelp.com/merged-dictionaries-xamarin-forms/ -->
+    <!--// This functionality starts with version 2.3.0 of Xamarin.Forms-->
+    <!--<ResourceDictionary MergeWith="theme:MainStyles" />-->
+
+    <!--essayer pour images 
+
+    <OnPlatform x:Key="boxSize"
+                 x:TypeArguments="x:Double"
+                 iOS="50"
+                 Android="50"
+                 WinPhone="75" />-->
+
+
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HeightRequest" Value="20"/>
+      </Style>
+
+      <Style x:Key="pickerStyle" TargetType="Picker"> 
+        <Setter Property="Margin" Value="0, 0, 0, 8"/>
+      </Style>
+
+      <Style x:Key="ThumbImageBrand" TargetType="Image">
+        <Setter Property="Source" Value="Assets/car.png" />
+        <Setter Property="WidthRequest" Value="20" />
+        <Setter Property="HeightRequest" Value="20" />
+      </Style>
+
+      <Style x:Key="ThumbImageModels" TargetType="Image">
+        <Setter Property="Source" Value="Assets/car.png" />
+        <Setter Property="WidthRequest" Value="20" />
+        <Setter Property="HeightRequest" Value="20" />
+      </Style>
+
+      <Style x:Key="ThumbImageCalendar" TargetType="Image">
+        <Setter Property="Source" Value="Assets/calendar.png" />
+        <Setter Property="WidthRequest" Value="20" />
+        <Setter Property="HeightRequest" Value="20" />
+
+      </Style>
+
+      <Style x:Key="ThumbImageProvince" TargetType="Image">
+        <Setter Property="Source" Value="Assets/pin.png" />
+        <Setter Property="WidthRequest" Value="20" />
+        <Setter Property="HeightRequest" Value="20" />
+      </Style>
+
+      <Style x:Key="ThumbImageKilometers" TargetType="Image">
+        <Setter Property="Source" Value="Assets/road.png" />
+        <Setter Property="WidthRequest" Value="20" />
+        <Setter Property="HeightRequest" Value="20" />
+      </Style>
+
+      <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Assets/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>-->
+
+
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Spacing="0"
+               Padding="20">
+
+    <Label Text="Essence contre Électricité"
+           Style="{StaticResource labelStyle}"
+           HeightRequest="60"
+           FontSize="20"
+           FontAttributes="Bold"
+           />
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="La marque de votre voiture actuelle"
+           Style="{StaticResource labelStyle}"
+             Grid.Row="0" Grid.Column="0"
+              />
+
+      <Image Style="{StaticResource ThumbImageBrand}"
+            Grid.Row="0" Grid.Column="1" />
+
+      <Picker Title="La marque"
+              Style="{StaticResource pickerStyle}"            
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+              />
+    </Grid>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Le modèle"
+           Style="{StaticResource labelStyle}"
+             Grid.Row="0" Grid.Column="0"
+              />
+
+      <Image Style="{StaticResource ThumbImageModels}"
+       Grid.Row="0" Grid.Column="1"  />
+
+      <Picker Title="Le modèle"
+              Style="{StaticResource pickerStyle}"   
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+              />
+    </Grid>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="L'année"
+           Style="{StaticResource labelStyle}"
+             Grid.Row="0" Grid.Column="0"
+              />
+
+      <Image Style="{StaticResource ThumbImageCalendar}"
+             Grid.Row="0" Grid.Column="1"  />
+
+      <Picker Title="L'année"
+              Style="{StaticResource pickerStyle}"   
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+              />
+    </Grid>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Votre province"
+           Style="{StaticResource labelStyle}"
+             Grid.Row="0" Grid.Column="0"
+              />
+
+      <Image Style="{StaticResource ThumbImageProvince}"
+             Grid.Row="0" Grid.Column="1"  />
+
+      <Picker Title="Votre province"
+              Style="{StaticResource pickerStyle}"   
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+              />
+    </Grid>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Votre kilomètrage par année"
+             Style="{StaticResource labelStyle}"
+             Grid.Row="0" Grid.Column="0"
+              />
+
+      <Image Style="{StaticResource ThumbImageKilometers}"
+             Grid.Row="0" Grid.Column="1"  />
+
+      <Slider x:Name="sldKilometer"
+              Minimum="0" Maximum="100000" Value="0"
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+      />
+
+      <Label x:Name="lblKilometer"
+             BindingContext="{x:Reference sldKilometer}"
+             Text="{Binding Value, StringFormat='{0:F0} Km'}"
+             Style="{StaticResource labelStyle}"
+             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+           />
+
+    </Grid>
+
+    <Button Text="Continuer"
+            Clicked="OnButtonClicked" />
+
+
+    <!--<Label Text="{Binding Test}"
+           Style="{StaticResource labelStyle}"
+           HeightRequest="20"
+           FontSize="Large"
+           FontAttributes="Bold"
+           />-->
+
+  </StackLayout>
 </ContentPage>

@@ -24,6 +24,13 @@
     <string>6.0</string>
     <key>CFBundleDisplayName</key>
     <string>Cars</string>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowArbitraryLoads</key>
+            <true />
+            <key>NSAllowArbitraryLoadsInWebContent</key>
+            <true />
+        </dict>
     <key>CFBundleIdentifier</key>
     <string>com.yourcompany.Cars</string>
     <key>CFBundleVersion</key>
