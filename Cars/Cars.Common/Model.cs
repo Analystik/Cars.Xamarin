@@ -32,10 +32,10 @@ namespace Cars
             return this._api.Get<Data.Car[]>($"makes/{makeId}/models/{modelId}/Cars");
         }
 
-        //public Task<Analystik.REST.IResponse<Data.FinancialEvaluation>> Calculate(Data.Profile profile)
-        //{
-        //    return this._api.Put<Data.FinancialEvaluation>($"calculate", profile);
-        //}
+        public Task<Analystik.REST.IResponse<Data.FinancialEvaluation>> Calculate(Data.Profile profile)
+        {
+            return this._api.Put<Data.FinancialEvaluation>($"calculate", profile);
+        }
 
 
         public Task<Data.Province[]> GetProvinces()
