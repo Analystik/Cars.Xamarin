@@ -5,12 +5,14 @@
              Title="Analystik Cars">
 
 
-  <!--  Voir pour Application.Resources dans App.xaml -->
+
   <ContentPage.Resources>
 
     <!--// https://xamarinhelp.com/merged-dictionaries-xamarin-forms/ -->
     <!--// This functionality starts with version 2.3.0 of Xamarin.Forms-->
     <!--<ResourceDictionary MergeWith="theme:MainStyles" />-->
+
+    <!-- ou Voir pour Application.Resources dans App.xaml (https://developer.xamarin.com/guides/xamarin-forms/working-with/application-class/) -->
 
     <!--essayer pour images 
 
@@ -29,39 +31,33 @@
         <Setter Property="HeightRequest" Value="20"/>
       </Style>
 
-      <Style x:Key="pickerStyle" TargetType="Picker"> 
+      <Style x:Key="pickerStyle" TargetType="Picker">
         <Setter Property="Margin" Value="0, 0, 0, 8"/>
       </Style>
 
-      <Style x:Key="ThumbImageBrand" TargetType="Image">
-        <Setter Property="Source" Value="Assets/car.png" />
+      <Style x:Key="imageStyle" TargetType="Image">
         <Setter Property="WidthRequest" Value="20" />
         <Setter Property="HeightRequest" Value="20" />
       </Style>
 
-      <Style x:Key="ThumbImageModels" TargetType="Image">
+      <Style x:Key="ThumbImageBrand" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/car.png" />
-        <Setter Property="WidthRequest" Value="20" />
-        <Setter Property="HeightRequest" Value="20" />
       </Style>
 
-      <Style x:Key="ThumbImageCalendar" TargetType="Image">
+      <Style x:Key="ThumbImageModels" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+        <Setter Property="Source" Value="Assets/car.png" />
+      </Style>
+
+      <Style x:Key="ThumbImageCalendar" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/calendar.png" />
-        <Setter Property="WidthRequest" Value="20" />
-        <Setter Property="HeightRequest" Value="20" />
-
       </Style>
 
-      <Style x:Key="ThumbImageProvince" TargetType="Image">
+      <Style x:Key="ThumbImageProvince" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/pin.png" />
-        <Setter Property="WidthRequest" Value="20" />
-        <Setter Property="HeightRequest" Value="20" />
       </Style>
 
-      <Style x:Key="ThumbImageKilometers" TargetType="Image">
+      <Style x:Key="ThumbImageKilometers" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/road.png" />
-        <Setter Property="WidthRequest" Value="20" />
-        <Setter Property="HeightRequest" Value="20" />
       </Style>
 
       <!--<ResourceDictionary.MergedDictionaries>
@@ -101,8 +97,8 @@
             Grid.Row="0" Grid.Column="1" />
 
       <Picker Title="La marque"
-              Style="{StaticResource pickerStyle}"            
-              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+              Style="{StaticResource pickerStyle}"
+              Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
     </Grid>
 
@@ -125,7 +121,7 @@
        Grid.Row="0" Grid.Column="1"  />
 
       <Picker Title="Le modèle"
-              Style="{StaticResource pickerStyle}"   
+              Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
     </Grid>
@@ -149,7 +145,7 @@
              Grid.Row="0" Grid.Column="1"  />
 
       <Picker Title="L'année"
-              Style="{StaticResource pickerStyle}"   
+              Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
     </Grid>
@@ -173,7 +169,7 @@
              Grid.Row="0" Grid.Column="1"  />
 
       <Picker Title="Votre province"
-              Style="{StaticResource pickerStyle}"   
+              Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
     </Grid>

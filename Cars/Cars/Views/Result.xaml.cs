@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace Cars.Views
 {
-	public partial class Result : ContentPage
-	{
-		public Result ()
-		{
-			InitializeComponent ();
-		}
-	}
+    public partial class Result : ContentPage
+    {
+        public Result()
+        {
+            InitializeComponent();
+        }
+    }
 }

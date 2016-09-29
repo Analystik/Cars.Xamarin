@@ -7,11 +7,14 @@ using Xamarin.Forms.Xaml;
 namespace Cars
 {
     [ContentProperty("Source")]
-    public class ImageResourceExtension : IMarkupExtension {
+    public class ImageResourceExtension : IMarkupExtension
+    {
         public string Source { get; set; }
-        public object ProvideValue(IServiceProvider serviceProvider) {
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
             if (Source == null)
                 return null;
-            return ImageSource.FromResource(Source); }
+            return ImageSource.FromResource(Source);
+        }
     }
 }
