@@ -95,7 +95,7 @@
       <Image Style="{StaticResource ThumbImageBrand}"
             Grid.Row="0" Grid.Column="1" />
 
-      <Picker Title="La marque"
+      <Picker x:Name="cboBrand" Title="La marque"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
@@ -167,7 +167,7 @@
       <Image Style="{StaticResource ThumbImageProvince}"
              Grid.Row="0" Grid.Column="1"  />
 
-      <Picker Title="Votre province"
+      <Picker x:Name="cboProvince"  Title="Votre province"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
