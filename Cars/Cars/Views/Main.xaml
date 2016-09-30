@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cars.Views.Main"
-             Title="Analystik Cars">
+             Title="Analystik Cars"
+             >
 
 
 
@@ -28,6 +29,10 @@
 
 
     <ResourceDictionary>
+      
+        
+        
+        
       <Style x:Key="labelStyle" TargetType="Label">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -37,30 +42,37 @@
 
       <Style x:Key="pickerStyle" TargetType="Picker">
         <Setter Property="Margin" Value="0, 0, 0, 8"/>
+        <!--<Setter Property="TextColor" Value="UIColor.White"/>-->
       </Style>
+        
+        
+      <!--<Style x:Key="pickerStyle" TargetType="Picker">
+        <Setter Property="Margin" Value="0, 0, 0, 8"/>
+        <Setter Property="TextColor" Value="UIColor.White"/>
+      </Style>-->
 
       <Style x:Key="imageStyle" TargetType="Image">
         <Setter Property="WidthRequest" Value="20" />
         <Setter Property="HeightRequest" Value="20" />
       </Style>
 
-      <Style x:Key="ThumbImageBrand" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+      <Style x:Key="thumbImageBrand" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/car.png" />
       </Style>
 
-      <Style x:Key="ThumbImageModels" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+      <Style x:Key="thumbImageModels" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/car.png" />
       </Style>
 
-      <Style x:Key="ThumbImageCalendar" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+      <Style x:Key="thumbImageCalendar" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/calendar.png" />
       </Style>
 
-      <Style x:Key="ThumbImageProvince" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+      <Style x:Key="thumbImageProvince" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/pin.png" />
       </Style>
 
-      <Style x:Key="ThumbImageKilometers" TargetType="Image" BasedOn="{StaticResource imageStyle}">
+      <Style x:Key="thumbImageKilometers" TargetType="Image" BasedOn="{StaticResource imageStyle}">
         <Setter Property="Source" Value="Assets/road.png" />
       </Style>
 
@@ -68,7 +80,8 @@
   </ContentPage.Resources>
 
   <StackLayout Spacing="0"
-               Padding="20">
+               Padding="20"
+               >
 
     <Label Text="Essence contre Électricité"
            Style="{StaticResource labelStyle}"
@@ -92,11 +105,12 @@
              Grid.Row="0" Grid.Column="0"
               />
 
-      <Image Style="{StaticResource ThumbImageBrand}"
+      <Image Style="{StaticResource thumbImageBrand}"
             Grid.Row="0" Grid.Column="1" />
 
       <Picker x:Name="cboBrand" Title="La marque"
               Style="{StaticResource pickerStyle}"
+              
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               
               />
@@ -117,7 +131,7 @@
              Grid.Row="0" Grid.Column="0"
               />
 
-      <Image Style="{StaticResource ThumbImageModels}"
+      <Image Style="{StaticResource thumbImageModels}"
        Grid.Row="0" Grid.Column="1"  />
 
       <Picker x:Name="cboModel" Title="Le modèle"
@@ -141,7 +155,7 @@
              Grid.Row="0" Grid.Column="0"
               />
 
-      <Image Style="{StaticResource ThumbImageCalendar}"
+      <Image Style="{StaticResource thumbImageCalendar}"
              Grid.Row="0" Grid.Column="1"  />
 
       <Picker x:Name="cboCar" Title="L'année"
@@ -165,7 +179,7 @@
              Grid.Row="0" Grid.Column="0"
               />
 
-      <Image Style="{StaticResource ThumbImageProvince}"
+      <Image Style="{StaticResource thumbImageProvince}"
              Grid.Row="0" Grid.Column="1"  />
 
       <Picker x:Name="cboProvince"  Title="Votre province"
@@ -190,7 +204,7 @@
              Grid.Row="0" Grid.Column="0"
               />
 
-      <Image Style="{StaticResource ThumbImageKilometers}"
+      <Image Style="{StaticResource thumbImageKilometers}"
              Grid.Row="0" Grid.Column="1"  />
 
       <Slider x:Name="sldKilometer"

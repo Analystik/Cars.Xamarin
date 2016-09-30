@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace Cars.Views
@@ -27,7 +26,6 @@ namespace Cars.Views
 
             var vm = this.BindingContext as Cars.VModel;
             vm.Evaluate(this._profile);
-
         }
     }
 }
