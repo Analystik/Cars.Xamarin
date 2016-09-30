@@ -5,8 +5,6 @@
              Title="Analystik Cars"
              >
 
-
-
   <ContentPage.Resources>
 
     <!--// https://xamarinhelp.com/merged-dictionaries-xamarin-forms/ -->
@@ -19,41 +17,37 @@
 
     <!-- ou Voir pour Application.Resources dans App.xaml (https://developer.xamarin.com/guides/xamarin-forms/working-with/application-class/) -->
 
-    <!--essayer pour images 
-
-    <OnPlatform x:Key="boxSize"
-                 x:TypeArguments="x:Double"
-                 iOS="50"
-                 Android="50"
-                 WinPhone="75" />-->
-
-
     <ResourceDictionary>
-      
-        
-        
-        
+
       <Style x:Key="labelStyle" TargetType="Label">
         <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HeightRequest" Value="30"/>
+      </Style>
+
+      <Style x:Key="titleStyle" TargetType="Label" BasedOn="{StaticResource labelStyle}">
         <Setter Property="FontSize" Value="Medium"/>
-        <Setter Property="HeightRequest" Value="20"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HeightRequest" Value="80"/>
       </Style>
 
       <Style x:Key="pickerStyle" TargetType="Picker">
         <Setter Property="Margin" Value="0, 0, 0, 8"/>
-        <!--<Setter Property="TextColor" Value="UIColor.White"/>-->
+        <Setter Property="HeightRequest" Value="40"/>
       </Style>
-        
-        
-      <!--<Style x:Key="pickerStyle" TargetType="Picker">
-        <Setter Property="Margin" Value="0, 0, 0, 8"/>
-        <Setter Property="TextColor" Value="UIColor.White"/>
-      </Style>-->
+
+      <Style x:Key="buttonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="40, 3, 40, 0 "/>
+        <Setter Property="BackgroundColor" Value="#FF2DBF29"/>
+      </Style>
 
       <Style x:Key="imageStyle" TargetType="Image">
-        <Setter Property="WidthRequest" Value="20" />
-        <Setter Property="HeightRequest" Value="20" />
+        <Setter Property="WidthRequest" Value="25" />
+        <Setter Property="HeightRequest" Value="25" />
       </Style>
 
       <Style x:Key="thumbImageBrand" TargetType="Image" BasedOn="{StaticResource imageStyle}">
@@ -84,16 +78,13 @@
                >
 
     <Label Text="Essence contre Électricité"
-           Style="{StaticResource labelStyle}"
-           HeightRequest="60"
-           FontSize="20"
-           FontAttributes="Bold"
+           Style="{StaticResource titleStyle}"
            />
 
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
-        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*" />
@@ -101,18 +92,17 @@
       </Grid.ColumnDefinitions>
 
       <Label Text="La marque de votre voiture actuelle"
-           Style="{StaticResource labelStyle}"
+             Style="{StaticResource labelStyle}"
              Grid.Row="0" Grid.Column="0"
-              />
+             />
 
       <Image Style="{StaticResource thumbImageBrand}"
-            Grid.Row="0" Grid.Column="1" />
+             Grid.Row="0" Grid.Column="1"
+             />
 
-      <Picker x:Name="cboBrand" Title="La marque"
+      <Picker x:Name="cboBrand"
               Style="{StaticResource pickerStyle}"
-              
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-              
               />
     </Grid>
 
@@ -127,14 +117,15 @@
       </Grid.ColumnDefinitions>
 
       <Label Text="Le modèle"
-           Style="{StaticResource labelStyle}"
+             Style="{StaticResource labelStyle}"
              Grid.Row="0" Grid.Column="0"
-              />
+             />
 
       <Image Style="{StaticResource thumbImageModels}"
-       Grid.Row="0" Grid.Column="1"  />
+             Grid.Row="0" Grid.Column="1"
+             />
 
-      <Picker x:Name="cboModel" Title="Le modèle"
+      <Picker x:Name="cboModel"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
@@ -151,14 +142,15 @@
       </Grid.ColumnDefinitions>
 
       <Label Text="L'année"
-           Style="{StaticResource labelStyle}"
+             Style="{StaticResource labelStyle}"
              Grid.Row="0" Grid.Column="0"
-              />
+             />
 
       <Image Style="{StaticResource thumbImageCalendar}"
-             Grid.Row="0" Grid.Column="1"  />
+             Grid.Row="0" Grid.Column="1"
+             />
 
-      <Picker x:Name="cboCar" Title="L'année"
+      <Picker x:Name="cboCar"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
@@ -175,14 +167,15 @@
       </Grid.ColumnDefinitions>
 
       <Label Text="Votre province"
-           Style="{StaticResource labelStyle}"
+             Style="{StaticResource labelStyle}"
              Grid.Row="0" Grid.Column="0"
-              />
+             />
 
       <Image Style="{StaticResource thumbImageProvince}"
-             Grid.Row="0" Grid.Column="1"  />
+             Grid.Row="0" Grid.Column="1"
+             />
 
-      <Picker x:Name="cboProvince"  Title="Votre province"
+      <Picker x:Name="cboProvince"
               Style="{StaticResource pickerStyle}"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
               />
@@ -202,35 +195,30 @@
       <Label Text="Votre kilomètrage par année"
              Style="{StaticResource labelStyle}"
              Grid.Row="0" Grid.Column="0"
-              />
+             />
 
       <Image Style="{StaticResource thumbImageKilometers}"
-             Grid.Row="0" Grid.Column="1"  />
+             Grid.Row="0" Grid.Column="1"
+             />
 
       <Slider x:Name="sldKilometer"
               Minimum="0" Maximum="100000" Value="0"
               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-      />
+              />
 
       <Label x:Name="lblKilometer"
              BindingContext="{x:Reference sldKilometer}"
              Text="{Binding Value, StringFormat='{0:F0} Km'}"
              Style="{StaticResource labelStyle}"
              Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-           />
+             />
 
     </Grid>
 
-    <Button Text="Continuer"
-            Clicked="OnButtonClicked" />
-
-
-    <!--<Label Text="{Binding Test}"
-           Style="{StaticResource labelStyle}"
-           HeightRequest="20"
-           FontSize="Large"
-           FontAttributes="Bold"
-           />-->
+    <Button Text="Continuers"
+            Clicked="OnButtonClicked"
+            Style="{StaticResource buttonStyle}"
+            />
 
   </StackLayout>
 </ContentPage>
