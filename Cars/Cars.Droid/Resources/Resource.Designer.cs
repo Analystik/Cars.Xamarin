@@ -1858,8 +1858,8 @@ namespace Cars.Droid
 			// aapt resource value: 0x7f020064
 			public const int mr_ic_settings_light = 2130837604;
 			
-			// aapt resource value: 0x7f020069
-			public const int notification_template_icon_bg = 2130837609;
+			// aapt resource value: 0x7f02006a
+			public const int notification_template_icon_bg = 2130837610;
 			
 			// aapt resource value: 0x7f020065
 			public const int pin = 2130837605;
@@ -1872,6 +1872,9 @@ namespace Cars.Droid
 			
 			// aapt resource value: 0x7f020068
 			public const int road = 2130837608;
+			
+			// aapt resource value: 0x7f020069
+			public const int splash300_300 = 2130837609;
 			
 			static Drawable()
 			{
@@ -3302,6 +3305,9 @@ namespace Cars.Droid
 			
 			// aapt resource value: 0x7f070001
 			public const int Theme_MediaRouter_Light = 2131165185;
+			
+			// aapt resource value: 0x7f070144
+			public const int Theme_Splash = 2131165508;
 			
 			// aapt resource value: 0x7f0700ee
 			public const int ThemeOverlay_AppCompat = 2131165422;

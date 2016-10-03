@@ -108,14 +108,12 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assetsback\AboutAssets.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -133,6 +131,7 @@
     <AndroidResource Include="Resources\Drawable\calendar.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
     <AndroidResource Include="Resources\Drawable\pin.png" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\pomp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\splash300_300.png" />
   </ItemGroup>
   <Import Project="..\Cars\Cars.projitems" Label="Shared" Condition="Exists('..\Cars\Cars.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
