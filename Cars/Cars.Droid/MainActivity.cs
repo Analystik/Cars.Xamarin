@@ -11,7 +11,7 @@ namespace Cars.Droid
 {
     [Activity (Label = "Cars", 
         Icon = "@drawable/icon",
-        //MainLauncher = false,
+        MainLauncher = false,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
