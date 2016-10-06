@@ -30,78 +30,81 @@
     </ResourceDictionary>
   </ContentPage.Resources>
 
-  <StackLayout Spacing="0"
-               Padding="20"
-               >
-    <!-- 2 StackLayouts to simulate a border -->
-    <StackLayout BackgroundColor="#FF2DBF29"
-                 Padding="2"
-                 Margin="0, 0, 0, 15"
+  <ScrollView>
+    <StackLayout Spacing="0"
+                 Padding="20"
                  >
-      <StackLayout BackgroundColor="Color.White"
-                   Padding="10"                 
+      <!-- 2 StackLayouts to simulate a border -->
+      <StackLayout BackgroundColor="#FF2DBF29"
+                   Padding="2"
+                   Margin="0, 0, 0, 15"
                    >
-        <StackLayout.Margin>
-           <OnPlatform x:TypeArguments="Thickness"
-                WinPhone="0, 0, 0, 15" />
-        </StackLayout.Margin>
+        <StackLayout BackgroundColor="Color.White"
+                     Padding="10"                 
+                     >
+          <StackLayout.Margin>
+             <OnPlatform x:TypeArguments="Thickness"
+                  WinPhone="0, 0, 0, 15" />
+          </StackLayout.Margin>
 
-        <Label Text="Propriétaire plus de 8 ans"
-               Style="{DynamicResource labelStyle}"
-               HeightRequest="60"
-               FontSize="20"
-               FontAttributes="Bold"
-               />
-        <Label Text="{Binding FinEvaluationDescription}"
-               Style="{DynamicResource labelStyle}"
-               />
+          <Label Text="Propriétaire plus de 8 ans"
+                 Style="{DynamicResource labelStyle}"
+                 HeightRequest="60"
+                 FontSize="18"
+                 FontAttributes="Bold"
+                 />
+          <Label Text="{Binding FinEvaluationDescription}"
+                 Style="{DynamicResource labelStyle}"
+                 />
+        </StackLayout>
+      </StackLayout>
+
+      <!-- 2 StackLayouts to simulate a border -->
+      <StackLayout BackgroundColor="#FF2DBF29"
+                   Padding="2"
+                   Margin="0, 50, 0, 15"
+                   >
+        <StackLayout BackgroundColor="Color.White"
+                     Padding="10"
+                     >
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Style="{StaticResource elementImagePomp}"
+                   Grid.Row="0" Grid.Column="0"
+                   />
+            <Label Text="{Binding FinEvaluation.GasTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
+                   Style="{DynamicResource labelStyle}"
+                   Grid.Row="1" Grid.Column="0"
+                   />
+            <Label Text="{Binding FinEvaluation.GasTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
+                   Style="{DynamicResource labelStyle}"
+                   Grid.Row="2" Grid.Column="0"
+                   />
+
+            <Image Style="{StaticResource elementImagePlug}"
+                   Grid.Row="0" Grid.Column="1"
+                   />
+            <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
+                   Style="{DynamicResource labelStyle}"
+                   Grid.Row="1" Grid.Column="1"
+                   />
+            <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
+                   Style="{DynamicResource labelStyle}"
+                   Grid.Row="2" Grid.Column="1"
+                   />
+          </Grid>
+        </StackLayout>
       </StackLayout>
     </StackLayout>
+  </ScrollView>
 
-    <!-- 2 StackLayouts to simulate a border -->
-    <StackLayout BackgroundColor="#FF2DBF29"
-                 Padding="2"
-                 Margin="0, 50, 0, 15"
-                 >
-      <StackLayout BackgroundColor="Color.White"
-                   Padding="10"
-                   >
-        <Grid>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-          </Grid.RowDefinitions>
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
-
-          <Image Style="{StaticResource elementImagePomp}"
-                 Grid.Row="0" Grid.Column="0"
-                 />
-          <Label Text="{Binding FinEvaluation.GasTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
-                 Style="{DynamicResource labelStyle}"
-                 Grid.Row="1" Grid.Column="0"
-                 />
-          <Label Text="{Binding FinEvaluation.GasTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
-                 Style="{DynamicResource labelStyle}"
-                 Grid.Row="2" Grid.Column="0"
-                 />
-
-          <Image Style="{StaticResource elementImagePlug}"
-                 Grid.Row="0" Grid.Column="1"
-                 />
-          <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesPer100km, StringFormat='{0:N2}$ / 100Km'}"
-                 Style="{DynamicResource labelStyle}"
-                 Grid.Row="1" Grid.Column="1"
-                 />
-          <Label Text="{Binding FinEvaluation.ElectricityTotalExpensesIn8Years, StringFormat='{0:N2}$ / 8 ans'}"
-                 Style="{DynamicResource labelStyle}"
-                 Grid.Row="2" Grid.Column="1"
-                 />
-        </Grid>
-      </StackLayout>
-    </StackLayout>
-  </StackLayout>
 </ContentPage>

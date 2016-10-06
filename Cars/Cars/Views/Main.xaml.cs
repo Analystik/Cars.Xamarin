@@ -14,17 +14,6 @@ namespace Cars.Views
         private Data.Make SelectedMake;
         private Data.Model SelectedModel;
 
-        private void Test()
-        {
-
-            Label x = new Label();
-
-            //x.TextColor
-
-        }
-
-
-
 
         private VModel ViewModel { get { return this.BindingContext as VModel; }  }
 
